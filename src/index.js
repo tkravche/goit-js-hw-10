@@ -46,9 +46,11 @@ function onInputCountryName(e) {
         clearTemplate(refs.countryInfo);
       }
     })
-    .catch(error =>
-      Notiflix.Notify.failure('Oops, there is no country with that name')
-    );
+    .catch(error => {
+      Notiflix.Notify.failure('Oops, there is no country with that name');
+      clearTemplate(refs.countriesList);
+      clearTemplate(refs.countryInfo);
+    });
 }
 
 function createCountriesList(countryFound) {
