@@ -30,3 +30,12 @@ body {
 .country-info__key {
   font-weight: 700;
 }
+ul {
+  list-style: none;
+}
+
+.country-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}

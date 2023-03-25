@@ -55,8 +55,9 @@ function createCountriesList(countryFound) {
   const countries = countryFound.reduce(
     (acc, country) =>
       acc +
-      `<li><img src="${country.flags.svg}" alt="Flag of ${country.name.official}" width="45"></href=></img><p>${country.name.official}</p></li>`,
-    '' );
+      `<li class="country-item"><img src="${country.flags.svg}" alt="Flag of ${country.name.official}" width="45"></href=></img><p>${country.name.official}</p></li>`,
+    ''
+  );
   refs.countriesList.innerHTML = countries;
   clearTemplate(refs.countryInfo);
 }
